@@ -34,7 +34,7 @@ BEGIN
         END_IF
     END_FOR
 
-    write("The length of the sentence :", x);
-    write("The number of words in the sentence :", z);
-    write("The number of vowels in the sentence :", v);
+    Write("The length of the sentence :", x);
+    Write("The number of words in the sentence :", z);
+    Write("The number of vowels in the sentence :", v);
 END
