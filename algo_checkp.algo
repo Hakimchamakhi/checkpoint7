@@ -1,0 +1,40 @@
+ALGORITHM algo_checkpoint
+VAR
+    ch : STRING;
+    test: BOOLEAN := False;
+    i,j,k,x,z,v : INTEGER;
+BEGIN
+    WHILE (test=False) DO
+    Read(ch);
+    if (ch[length(ch)-1]<>".") then
+        Write("It must ends with a point '.' ")
+    ELSE
+        test:=True;
+    END_IF
+    END_WHILE
+
+    x:=0;
+    FOR i FROM 1 TO length(ch) DO
+        IF (ch[i]<>" ") THEN
+            x:= x+1;
+        END_IF
+    END_FOR
+
+    z:=1;
+    FOR j FROM 1 TO length(ch) DO
+        IF (ch[j]=" ") THEN
+            z:= z+1;
+        END_IF
+    END_FOR
+
+    v:=0;
+    FOR k FROM 1 TO length(ch) DO
+        IF (ch[k] in ["a","e","i","o","u","y","A","E","I","O","U","Y"]) THEN
+            v:= v+1;
+        END_IF
+    END_FOR
+
+    write("The length of the sentence :", x);
+    write("The number of words in the sentence :", z);
+    write("The number of vowels in the sentence :", v);
+END
