@@ -6,7 +6,7 @@ VAR
 BEGIN
     WHILE (test=False) DO
     Read(ch);
-    if (ch[length(ch)-1]<>".") then
+    if (ch[ch.length-1]<>".") then
         Write("It must ends with a point '.' ")
     ELSE
         test:=True;
@@ -14,21 +14,21 @@ BEGIN
     END_WHILE
 
     x:=0;
-    FOR i FROM 1 TO length(ch) DO
+    FOR i FROM 0 TO ch.length-1 DO
         IF (ch[i]<>" ") THEN
             x:= x+1;
         END_IF
     END_FOR
 
     z:=1;
-    FOR j FROM 1 TO length(ch) DO
+    FOR j FROM 0 TO ch.length-1 DO
         IF (ch[j]=" ") THEN
             z:= z+1;
         END_IF
     END_FOR
 
     v:=0;
-    FOR k FROM 1 TO length(ch) DO
+    FOR k FROM 0 TO ch.length-1 DO
         IF (ch[k] in ["a","e","i","o","u","y","A","E","I","O","U","Y"]) THEN
             v:= v+1;
         END_IF
